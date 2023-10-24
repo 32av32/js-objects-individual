@@ -56,9 +56,9 @@ const market = {
         let cartStatus = this.cart.map(i => `name: ${i.name}, price: ${i.price}, count: ${i.count}\n`)
         let orderStatus = this.order.map(i => `name: ${i.name}, price: ${i.price}, count: ${i.count}\n`)
         console.log(
-            `Your balance: ${this.balance},
-            Корзина: ${cartStatus || 'Empty'},
-            Заказ: ${orderStatus || 'Empty'}.
+            `User: ${this.userName}. Your balance: ${this.balance},
+            Корзина: ${cartStatus.length ? `${cartStatus}` : 'Empty'},
+            Заказ: ${orderStatus.length ? `${orderStatus}` : 'Empty'}.
             `
         )
     }
